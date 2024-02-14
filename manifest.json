@@ -1,0 +1,32 @@
+{
+    "manifest_version": 4,
+    "type": "extension",
+    "name": "QQRedPackGetter",
+    "slug": "QQRedPackGetter",
+    "description": "基于模拟点击实现的QQ抢红包工具",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "kagg886",
+            "link": "https://github.com/kagg886"
+        }
+    ],
+    "platform": [
+        "win32",
+        "linux",
+        "darwin"
+    ],
+    "injects": {
+        "renderer": "./src/renderer.js",
+        "main": "./src/main.js",
+        "preload": "./src/preload.js"
+    },
+    "repository": {
+        "repo": "kagg886/QQRedPackGetter",
+        "branch": "master",
+        "release": {
+            "tag": "1.0.0",
+            "file": "release.zip"
+        }
+    }
+}
