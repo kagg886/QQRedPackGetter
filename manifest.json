@@ -4,11 +4,15 @@
     "name": "QQRedPackGetter",
     "slug": "QQRedPackGetter",
     "description": "基于模拟点击实现的QQ抢红包工具",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "authors": [
         {
             "name": "kagg886",
             "link": "https://github.com/kagg886"
+        },
+        {
+            "name": "nkggya",
+            "link": "https://github.com/nkggya"
         }
     ],
     "platform": [
@@ -25,7 +29,7 @@
         "repo": "kagg886/QQRedPackGetter",
         "branch": "master",
         "release": {
-            "tag": "1.0.0"
+            "tag": "2.0.0"
         }
     }
 }
