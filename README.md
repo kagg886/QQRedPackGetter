@@ -10,12 +10,12 @@
   >
   > 不过，由于主面板是懒加载特性，插件可能不会监听到红包变化。
   >
-- 请自行修改:`LiteQQLoaderNT/data/QQRedPackGetter/setting.json`(该文件需首次启动后才能生成)
-- 每次修改 `setting.json`后需要重启QQ才能生效
+- 请自行修改:`LiteQQLoaderNT/data/QQRedPackGetter/settings.json`(该文件需首次启动后才能生成)
+- 每次修改 `settings.json`后需要重启QQ才能生效
 
 > 基于主播的Electron的菜鸡水平，欢迎提供一个设置页面以供配置(((
 
-## 2. setting.json配置
+## 2. settings.json配置
 
 ```json
 {
