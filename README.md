@@ -10,20 +10,21 @@
   >
   > 不过，由于主面板是懒加载特性，插件可能不会监听到红包变化。
   >
-- 请自行修改:`LiteQQLoaderNT/data/QQRedPackGetter/settings.json`(该文件需首次启动后才能生成)
-- 每次修改 `settings.json`后需要重启QQ才能生效
+- 请自行修改:`LiteQQLoaderNT/data/QQRedPackGetter/config.json`(该文件需首次启动后才能生成)
+- 每次修改 `config.json`后需要重启QQ才能生效
 
 > 基于主播的Electron的菜鸡水平，欢迎提供一个设置页面以供配置(((
 
-## 2. settings.json配置
+## 2. config.json配置
 
 ```json
 {
 	//延时500毫秒后抢包
 	"delay": 500,
-	//启用随机读秒。若该属性不为underfined，则delay属性无效。
-	"randomDelay": underfined,
-
+	//是否启用随机读秒。0为不启用，1为启用，且delay属性无效。
+	"randomDelay": 0,
+	//包含关键词红包不领取，请按照格式添加关键词。
+	"keywords":["gua","测","挂","ti","踢","试"],
 	"randomDelay": {
 		//最小延迟和最大延迟，单位为毫秒。
 		"min": 1000,
