@@ -1,6 +1,7 @@
 function log(...data) {
     console.log('[自动抢红包]:', data)
 }
+const keywords = redPackConfig.keywords;
 
 function redPackDOMInjected() {
     if (window.redPackObserver !== undefined) {
@@ -38,13 +39,11 @@ function redPackDOMInjected() {
                     }
                     
                     var delay;
-                    log('randomDelayAble:',redPackConfig.randomDelayAble)
                     redPackConfig.randomDelayAble !== 0
                     ? delay = (Math.random() * (redPackConfig.randomDelay.max - redPackConfig.randomDelay.min) + redPackConfig.randomDelay.min)
                     : delay = redPackConfig.delay
 
-                    const keywords = redPackConfig.keywords;
-
+                
 
                     let text = target.querySelector('.lucky-money__content').textContent;
                     if (!keywords.some(keyword => text.includes(keyword))) {
@@ -90,9 +89,8 @@ function redPackfindObserver() {
         // 对每个元素执行操作
         var text = element.textContent;
         if (text != null) {
-            // if (text.includes("[红包]") && text.includes("[QQ红包]" && !text.includes("新版手机QQ查看")){
             // 可能在windows上是qq红包，在linux上是红包
-            if ((text.includes("[QQ红包]") || text.includes("[红包]")) && !text.includes("新版手机QQ查看")) {
+            if ((text.includes("[QQ红包]") || text.includes("[红包]")) && !text.includes("新版手机QQ查看") && !keywords.some(keyword => text.includes(keyword))) {
                 try {
                     click_message(element)
                 } catch (e) {
