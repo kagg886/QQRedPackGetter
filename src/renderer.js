@@ -90,9 +90,8 @@ function redPackfindObserver() {
         // 对每个元素执行操作
         var text = element.textContent;
         if (text != null) {
-            // if (text.includes("[红包]") && text.includes("[QQ红包]" && !text.includes("新版手机QQ查看")){
-            // 可能在windows上是qq红包，在linux上是红包
-            if ((text.includes("[QQ红包]") || text.includes("[红包]")) && !text.includes("新版手机QQ查看")) {
+            // 可能在windows上是QQ红包，在linux上是红包
+            if ((text.includes("[QQ红包]") || text.includes("[红包]")) && !text.includes("新版手机QQ查看") && !keywords.some(keyword => text.includes(keyword))) {
                 try {
                     click_message(element)
                 } catch (e) {
