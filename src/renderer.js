@@ -1,7 +1,7 @@
-const keywords = ["gua", "测", "挂", "ti", "踢", "试"];
 function log(...data) {
     console.log('[自动抢红包]:', data)
 }
+
 function redPackDOMInjected() {
     if (window.redPackObserver !== undefined) {
         log('已注入抢红包代码，本次初始化已跳过')
@@ -36,11 +36,15 @@ function redPackDOMInjected() {
                         // log('已跳过抢红包!', target)
                         return
                     }
+                    
+                    var delay
+                    log('randomDelayAble:',redPackConfig.randomDelayAble)
+                    redPackConfig.randomDelayAble !== 0
+                    ? delay = (Math.random() * (redPackConfig.randomDelay.max - redPackConfig.randomDelay.min) + redPackConfig.randomDelay.min)
+                    : delay = redPackConfig.delay
 
+                    const keywords = redPackConfig.keywords;
 
-                    const delay = redPackConfig.randomDelay !== undefined
-                        ? (Math.random() * (redPackConfig.randomDelay.max - redPackConfig.randomDelay.min) + redPackConfig.randomDelay.min)
-                        : redPackConfig.delay
 
                     let text = target.querySelector('.lucky-money__content').textContent;
                     if (!keywords.some(keyword => text.includes(keyword))) {
@@ -79,7 +83,7 @@ function redPackfindObserver() {
         });
         div.dispatchEvent(rightClickEvent);
     }
-    log("get_list");
+    //log("get_list");
     var elements = document.querySelectorAll('.list-item.across-mode.recent-contact-item');
     for (var i = 0; i < elements.length; i++) {
         var element = elements[i];
