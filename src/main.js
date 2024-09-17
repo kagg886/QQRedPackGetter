@@ -14,10 +14,17 @@ if (!fs.existsSync(pluginDataPath)) {
     log('配置文件夹不存在，已自动创建')
 }
 if (!fs.existsSync(settingsPath)) {
-    fs.writeFileSync(settingsPath, JSON.stringify({
+    fs.writeFileSync(settingsPath, JSON.stringify(
+        {
         delay: 500,
-        randomDelay: undefined
-    }));
+        keywords: ["gua", "测", "挂", "ti", "踢", "试"],
+        randomDelayAble: 0,
+        randomDelay: {
+		min: 1000,
+		max: 2000
+	}
+    }
+));
     log('配置文件不存在，已自动创建')
 }
 
