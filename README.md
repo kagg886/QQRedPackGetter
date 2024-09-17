@@ -21,9 +21,10 @@
 {
 	//延时500毫秒后抢包
 	"delay": 500,
-	//启用随机读秒。若该属性不为underfined，则delay属性无效。
-	"randomDelay": underfined,
-
+	//是否启用随机延迟。0为不启用，1为启用，且delay属性无效。
+	"randomDelayAble": 0,
+	//包含关键词红包不领取，请按照格式添加关键词。
+	"keywords":["gua","测","挂","ti","踢","试"],
 	"randomDelay": {
 		//最小延迟和最大延迟，单位为毫秒。
 		"min": 1000,
