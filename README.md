@@ -22,7 +22,7 @@
 	//延时500毫秒后抢包
 	"delay": 500,
 	//是否启用随机读秒。0为不启用，1为启用，且delay属性无效。
-	"randomDelay": 0,
+	"randomDelayAble": 0,
 	//包含关键词红包不领取，请按照格式添加关键词。
 	"keywords":["gua","测","挂","ti","踢","试"],
 	"randomDelay": {
