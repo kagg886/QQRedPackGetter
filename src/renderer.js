@@ -37,7 +37,7 @@ function redPackDOMInjected() {
                         return
                     }
                     
-                    var delay
+                    var delay;
                     log('randomDelayAble:',redPackConfig.randomDelayAble)
                     redPackConfig.randomDelayAble !== 0
                     ? delay = (Math.random() * (redPackConfig.randomDelay.max - redPackConfig.randomDelay.min) + redPackConfig.randomDelay.min)
